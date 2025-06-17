@@ -1,0 +1,55 @@
+<div class="container py-5 ms-5">
+  <div class="row justify-content-center">
+    <div class="col-lg-13">
+      <div class="card shadow">
+        <div class="card-header bg-dark text-white text-center">
+          <h4 class="mt-2">Agregar Nuevo Colaborador</h4>
+        </div>
+        <div class="card-body">
+          <form [formGroup]="colaboradorForm" (ngSubmit)="guardarColaborador()">
+
+            <div class="mb-3">
+              <label for="nombre" class="form-label">Nombre</label>
+              <input type="text" class="form-control" id="nombre" formControlName="nombre" placeholder="Ingrese el nombre">
+            </div>
+
+            <div class="mb-3">
+              <label for="apellido" class="form-label">Apellido</label>
+              <input type="text" class="form-control" id="apellido" formControlName="apellido" placeholder="Ingrese el apellido">
+            </div>
+
+            <div class="mb-3">
+              <label for="direccion" class="form-label">Dirección</label>
+              <input type="text" class="form-control" id="direccion" formControlName="direccion" placeholder="Ingrese la dirección">
+            </div>
+
+            <div class="mb-3">
+              <label for="edad" class="form-label">Edad</label>
+              <input type="number" class="form-control" id="edad" formControlName="edad" placeholder="Ingrese la edad" min="0">
+            </div>
+
+            <div class="mb-3">
+              <label for="profesion" class="form-label">Profesión</label>
+              <input type="text" class="form-control" id="profesion" formControlName="profesion" placeholder="Ingrese la profesión">
+            </div>
+
+            <div class="mb-3">
+              <label for="estadoCivil" class="form-label">Estado Civil</label>
+              <select class="form-select" id="estadocivil" formControlName="estadocivil">
+                <option value="" disabled selected>Seleccione una opción</option>
+                <option value="soltero">Soltero(a)</option>
+                <option value="casado">Casado(a)</option>
+                <option value="divorciado">Divorciado(a)</option>
+                <option value="viudo">Viudo(a)</option>
+              </select>
+            </div>
+
+            <div class="text-center">
+              <button type="submit" class="btn btn-outline-dark btn-lg px-5">Guardar Colaborador</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

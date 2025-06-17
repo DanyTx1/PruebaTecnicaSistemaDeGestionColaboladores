@@ -1,0 +1,60 @@
+<div class="container py-3">
+  <div class="card shadow">
+    <div class="card-header bg-dark text-white text-center">
+      <h5 class="mt-2">Editar Colaborador</h5>
+    </div>
+    <div class="card-body">
+      <form [formGroup]="colaboradorForm">
+        <div class="mb-3">
+          <label for="nombre" class="form-label">Nombre</label>
+          <input type="text" class="form-control" id="nombre" formControlName="nombre">
+          <div *ngIf="colaboradorForm.get('nombre')?.touched && colaboradorForm.get('nombre')?.invalid" class="text-danger">
+            El nombre es obligatorio.
+          </div>
+
+        </div>
+
+        <div class="mb-3">
+          <label for="apellido" class="form-label">Apellido</label>
+          <input type="text" class="form-control" id="apellido" formControlName="apellido">
+          <div *ngIf="colaboradorForm.get('apellido')?.touched && colaboradorForm.get('apellido')?.invalid" class="text-danger">
+            El apellido es obligatorio.
+          </div>
+
+        </div>
+
+        <div class="mb-3">
+          <label for="direccion" class="form-label">Dirección</label>
+          <input type="text" class="form-control" id="direccion" formControlName="direccion">
+        </div>
+
+        <div class="mb-3">
+          <label for="edad" class="form-label">Edad</label>
+          <input type="number" class="form-control" id="edad" formControlName="edad">
+        </div>
+
+        <div class="mb-3">
+          <label for="profesion" class="form-label">Profesión</label>
+          <input type="text" class="form-control" id="profesion" formControlName="profesion">
+        </div>
+
+        <div class="mb-3">
+          <label for="estadocivil" class="form-label">Estado Civil</label>
+          <select class="form-select" id="estadocivil" formControlName="estadocivil">
+            <option value="" disabled selected>Seleccione una opción</option>
+            <option value="soltero">Soltero(a)</option>
+            <option value="casado">Casado(a)</option>
+            <option value="divorciado">Divorciado(a)</option>
+            <option value="viudo">Viudo(a)</option>
+          </select>
+        </div>
+
+        <div class="text-center">
+          <button type="submit" class="btn btn-outline-dark btn-lg px-5"
+                  (click)="guardarCambios()">Guardar Cambios
+          </button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>

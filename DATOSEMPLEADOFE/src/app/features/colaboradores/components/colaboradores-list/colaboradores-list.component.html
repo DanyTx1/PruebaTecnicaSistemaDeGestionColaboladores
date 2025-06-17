@@ -1,0 +1,33 @@
+<div class="row vh-100" style="background-color: #e5e8e8 !important;">
+  <div class="col-3">
+    <app-nuevo-colaborador (colaboradorGuardado)="recargarTabla()"></app-nuevo-colaborador>
+  </div>
+
+  <div class="col-9">
+    <div class="container mt-5 me-5">
+      <div class="card shadow">
+        <div class="card-header bg-dark text-white text-center">
+          <h5 class="mt-2">Colaboradores</h5>
+        </div>
+        <div class="card-body">
+          <table id="tablaColaboradores" class="table table-hover table-bordered align-middle mb-0">
+            <thead class="table-light text-center">
+            <tr>
+              <th>ID</th>
+              <th>Nombre</th>
+              <th>Apellido</th>
+              <th>Dirección</th>
+              <th>Edad</th>
+              <th>Profesión</th>
+              <th>Estado Civil</th>
+              <th>Opciones</th>
+            </tr>
+            </thead>
+            <tbody></tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
